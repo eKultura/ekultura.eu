@@ -27,8 +27,8 @@ git reset --hard origin/deployment
 git init
 
 # Nastavení jména a emailu (globálně)
-git config --global user.name "Laura"
-git config --global user.email "vas.email@example.com"
+git config --global user.name "Jméno"
+git config --global user.email "info@ekultura.eu"
 
 # Nastavení bezpečného adresáře (pro CI/produkční prostředí)
 git config --global --add safe.directory /var/www/test.digitalni-muzeum.cz
