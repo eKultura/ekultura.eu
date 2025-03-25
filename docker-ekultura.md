@@ -12,7 +12,6 @@ Tento dokument obsahuje základní příkazy pro práci s Dockerem a Docker Comp
 
 ## 🏗️ Vytváření Docker image (Dockerfile → Image)
 
-![docker build](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-build.png)
 
 ### Build Docker image
 ```sh
