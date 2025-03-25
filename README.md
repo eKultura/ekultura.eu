@@ -1,2 +1,2 @@
 # ekultura.eu
-Non-profit organization eKultura.eu
+Nezisková organizace **[eKultura](https://www.ekultura.eu)**
