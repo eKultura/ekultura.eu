@@ -1,6 +1,6 @@
 # 📘 SQL príkazy z příkazové řádky (MySQL/MariaDB)
   
-Praktická příručka pro správu databází v projektech **[eKultura](https://www.ekultura.eu)**
+Praktická příručka pro správu databází v projektech **[eKultura](https://ekultura.eu)**
 
 ---
 
@@ -66,5 +66,5 @@ docker exec -it magic_db mariadb -u root -p
 
 ---
 
-_Vytvořeno pro interní potřeby projektů **[eKultura](https://www.ekultura.eu)** z. s._  
+_Vytvořeno pro interní potřeby projektů **[eKultura](https://ekultura.eu)** z. s._  
 `#eKultura #SQL #Docker #MariaDB`
