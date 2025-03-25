@@ -1,11 +1,18 @@
-# Docker-hub eKultura
-Pro potřeby projektů v rámci neziskové organizace eKultura používáme system kontejnerů.
+# 🐳 Docker-hub eKultura
 
-## Docker Commands Cheat Sheet
+Pro potřeby projektů v rámci neziskové organizace **[eKultura](https://ekultura.eu)** používáme systém kontejnerů.
+
+---
+
+## 🧰 Docker Commands Cheat Sheet
 
 Tento dokument obsahuje základní příkazy pro práci s Dockerem a Docker Compose.
 
-## Vytváření Docker image (Dockerfile -> Image)
+---
+
+## 🏗️ Vytváření Docker image (Dockerfile → Image)
+
+![docker build](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-build.png)
 
 ### Build Docker image
 ```sh
@@ -19,26 +26,30 @@ docker-compose build --no-cache
 
 ---
 
-## Spouštění a správa kontejnerů
+## 🚀 Spouštění a správa kontejnerů
+
+![docker up](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-up.png)
 
 ### Spuštění kontejnerů pomocí Docker Compose
 ```sh
 docker-compose up -d
 ```
 
-### Zastavení a odstranění kontejnerů (musí se spouštět ve stejné složce jako `docker-compose.yml`)
+### Zastavení a odstranění kontejnerů (ve stejné složce jako `docker-compose.yml`)
 ```sh
 docker-compose down
 ```
+
 ### Restart kontejneru
 ```sh
 docker restart <container_name>
 ```
+
 ### Zastavení konkrétního kontejneru
 ```sh
 docker stop <container_name>
 ```
-> Poznámka: Pokud má kontejner nastaveno `restart=always`, po restartu serveru se automaticky spustí znovu.
+> Pokud má kontejner `restart=always`, po restartu serveru se spustí automaticky.
 
 ### Spuštění konkrétního kontejneru
 ```sh
@@ -47,32 +58,33 @@ docker start <container_name>
 
 ---
 
-## Seznam kontejnerů
+## 📋 Seznam kontejnerů
 
-### Seznam běžících kontejnerů
+![docker ps](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-ps.png)
+
+### Běžící kontejnery
 ```sh
 docker ps
 ```
 
-### Seznam všech kontejnerů (včetně zastavených)
+### Všechny kontejnery (včetně zastavených)
 ```sh
 docker ps -a
 ```
 
-### Filtrování podle názvu (např. všechny běžící kontejnery obsahující `magic` v názvu)
+### Filtrování podle názvu
 ```sh
 docker ps --filter "name=magic"
 ```
 
 ---
 
-## Zobrazení logů z kontejneru
+## 📄 Zobrazení logů z kontejneru
 
 ### Výpis logů
 ```sh
 docker logs <container_name>
 ```
-
 **Příklad:**
 ```sh
 docker logs magic_django
@@ -85,28 +97,26 @@ docker logs magic_django --tail 100 -f
 
 ---
 
-## Spouštění příkazů uvnitř kontejnerů
+## 🔧 Spouštění příkazů uvnitř kontejnerů
 
-### Otevření terminálu v běžícím kontejneru (vstup do kontejneru)
+### Otevření terminálu v kontejneru
 ```sh
 docker exec -it <container_name> bash
 ```
-
 **Příklad:**
 ```sh
 docker exec -it magic_django bash
 ```
 
-### Otevření MariaDB shellu uvnitř kontejneru
+### MariaDB shell uvnitř kontejneru
 ```sh
 docker exec -it magic_db mariadb -u root -p
 ```
 
-### Přečtení obsahu souboru uvnitř kontejneru
+### Čtení souboru v kontejneru
 ```sh
 docker exec -it <container_name> cat /cesta/k/souboru
 ```
-
 **Příklad:**
 ```sh
 docker exec -it magic_django cat /div_app/nohup.out
@@ -114,38 +124,36 @@ docker exec -it magic_django cat /div_app/nohup.out
 
 ---
 
-## Správa Docker sítí
+## 🌐 Správa Docker sítí
+
+![docker network](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-network.png)
 
 ### Seznam sítí
 ```sh
 docker network ls
 ```
 
-### Inspekce konkrétní sítě
+### Detailní inspekce sítě
 ```sh
 docker network inspect <nazev_site>
 ```
 
-### Volání mezi kontejnery ve stejné síti
-V Docker síti se kontejnery mohou oslovovat pomocí jejich názvu z `docker-compose.yml` nebo `.env` .
-Například pokud máš kontejner `magic_django` a chceš se připojit k databázi `magic_db`, použiješ `magic_db` místo IP adresy.
-Toto platí jak v terminálu, tak např. v `settings.py` v Django projektu
-
-**Příklad v aplikaci:**
+### Volání mezi kontejnery (pomocí názvu)
+Např. kontejner `magic_django` přistupuje k `magic_db`:
 ```sh
 mysql -h magic_db -u root -p
 ```
 
 ---
 
-## Monitorování využití zdrojů
+## 📊 Monitorování využití zdrojů
 
-### Zobrazení statistik všech běžících kontejnerů
+### Statistiky všech běžících kontejnerů
 ```sh
 docker stats
 ```
 
-### Zobrazení statistik konkrétního kontejneru
+### Statistiky konkrétního kontejneru
 ```sh
 docker stats <container_name>
 ```
@@ -154,6 +162,7 @@ docker stats <container_name>
 
 Tento dokument slouží jako základní referenční příručka pro práci s Dockerem a Docker Compose.
 
-  _Vytvořeno pro interní potřeby projektů **[eKultura](https://ekultura.eu)** z. s._  
-  *#vytvořil Petr Malina pro potřeby [eKultura](https://ekultura.eu)*
-`#eKultura #Docker # #Ubuntu #Server #Linux`
+_Vytvořeno pro interní potřeby projektů **[eKultura](https://ekultura.eu)** z. s._  
+_*#vytvořil Petr Malina pro potřeby [eKultura](https://ekultura.eu)*_  
+`#eKultura #Docker #Ubuntu #Server #Linux`
+
