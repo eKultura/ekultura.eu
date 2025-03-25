@@ -1,2 +1,2 @@
 # ekultura.eu
-Nezisková organizace **[eKultura](https://www.ekultura.eu)**
+Nezisková organizace **[eKultura](https://ekultura.eu)**
