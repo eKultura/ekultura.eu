@@ -94,7 +94,7 @@ docker logs magic_django --tail 100 -f
 
 ## 🔧 Spouštění příkazů uvnitř kontejnerů
 
-### Otevření terminálu v kontejneru
+### Otevření terminálu v kontejneru (**vstup do kontejneru**)
 ```sh
 docker exec -it <container_name> bash
 ```
