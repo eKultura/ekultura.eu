@@ -27,8 +27,6 @@ docker-compose build --no-cache
 
 ## 🚀 Spouštění a správa kontejnerů
 
-![docker up](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-up.png)
-
 ### Spuštění kontejnerů pomocí Docker Compose
 ```sh
 docker-compose up -d
@@ -58,8 +56,6 @@ docker start <container_name>
 ---
 
 ## 📋 Seznam kontejnerů
-
-![docker ps](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-ps.png)
 
 ### Běžící kontejnery
 ```sh
@@ -124,8 +120,6 @@ docker exec -it magic_django cat /div_app/nohup.out
 ---
 
 ## 🌐 Správa Docker sítí
-
-![docker network](https://raw.githubusercontent.com/eKultura/assets/main/images/docker-network.png)
 
 ### Seznam sítí
 ```sh
