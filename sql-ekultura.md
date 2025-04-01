@@ -7,7 +7,7 @@ Praktická příručka pro správu databází v projektech **[eKultura](https://
 ## 🔗 Připojení k databázi
 ```bash
 mysql -u root -p
-sudo myslq -u root -p
+sudo mysql -u root -p
 
 ### S určením hostitele a portu
 mysql -u root -p -h 127.0.0.1 -P 3306
