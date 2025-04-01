@@ -23,15 +23,18 @@ CREATE DATABASE ekultura_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_genera
 
 ## 👤 Vytvoření nového uživatele
 ```sql
+CREATE USER 'ekultura_user'@'localhost' IDENTIFIED BY 'bezpecne_heslo';
 CREATE USER 'ekultura_user'@'%' IDENTIFIED BY 'bezpecne_heslo';
 ```
 
 ## 🔐 Přiřazení oprávnění
 ```sql
+GRANT ALL PRIVILEGES ON ekultura_db.* TO 'ekultura_user'@'localhost';
 GRANT ALL PRIVILEGES ON ekultura_db.* TO 'ekultura_user'@'%';
 FLUSH PRIVILEGES;
 
 -- Změna hesla uživatele
+ALTER USER 'ekultura_user'@'localhost' IDENTIFIED BY 'nove_bezpecne_heslo';
 ALTER USER 'ekultura_user'@'%' IDENTIFIED BY 'nove_bezpecne_heslo';
 ```
 
