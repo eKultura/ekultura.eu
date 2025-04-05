@@ -20,7 +20,7 @@ sudo ln -s /etc/nginx/sites-available/ekultura.eu /etc/nginx/sites-enabled/
 
 ---
 
-## 🔧 Základní PHP konfigurace (např. ekultura.eu)
+## 🔧 Základní PHP konfigurace
 
 ```nginx
 server {
