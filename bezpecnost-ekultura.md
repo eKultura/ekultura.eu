@@ -31,6 +31,37 @@ add_header Content-Security-Policy "default-src 'self'; script-src 'self';";
 
 ---
 
+---
+
+## 🔐 Správa portů a zabezpečení
+
+### Povolení portů v UFW (Firewall)
+
+```bash
+# Povolení HTTP
+sudo ufw allow 80/tcp
+
+# Povolení HTTPS
+sudo ufw allow 443/tcp
+
+# (Volitelně) otevření portu pro specifické API nebo docker službu
+sudo ufw allow 8012/tcp
+```
+
+> ⚠️ Otevírej pouze ty porty, které skutečně potřebuješ. Každý otevřený port je potenciální vektor útoku.
+
+### Kontrola aktivních pravidel
+```bash
+sudo ufw status verbose
+```
+
+### Aktivace firewallu (pokud ještě není)
+```bash
+sudo ufw enable
+```
+
+---
+
 *Vytvořeno jako bezpečnostní minimum pro nasazení nových serverů eKultura z. s.*
 
 `#eKultura #Ubuntu #Bezpečnost #Nginx #Security`
