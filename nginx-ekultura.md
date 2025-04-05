@@ -31,7 +31,8 @@ server {
     index index.php index.html index.htm;
 
     location / {
-        try_files $uri $uri/ /index.php?$query_string;
+        rewrite ^/([a-zA-Z0-9\-_]+)$ /$1.php last;
+        try_files $uri $uri/ =404;
     }
 
     location ~ \.php$ {
