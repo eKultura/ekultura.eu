@@ -57,13 +57,74 @@ Certbot obvykle vytvoří automaticky, ale můžeme upravit ručně:
 ```bash
 sudo certbot --nginx -d ekultura.eu -d www.ekultura.eu
 ```
-A poté přesměrování  na jednu variantu
+### A poté přesměrování  na jednu variantu a upravit blok http (port 80)
 ```nginx
 server {
     listen 80;
     server_name ekultura.eu www.ekultura.eu;
 
     return 301 https://$host$request_uri;
+}
+```
+### Smazat záplatu/fix od certbotu
+```nginx
+server {
+    if ($host = www.ekultura.eu) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    if ($host = ekultura.eu) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name ekultura.eu www.ekultura.eu;
+    return 404; # managed by Certbot
+}
+```
+
+### Kompletně přepsaná a elegantní varianta pro 443 a 80 s přesměrování z www
+```nginx
+server {
+    listen 443 ssl;
+    server_name ekultura.eu www.ekultura.eu;
+
+    ssl_certificate /etc/letsencrypt/live/ekultura.eu/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/ekultura.eu/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # 💡 Přesměrování z www.ekultura.eu na ekultura.eu
+    if ($host = www.ekultura.eu) {
+        return 301 https://ekultura.eu$request_uri;
+    }
+
+    root /var/www/ekultura.eu;
+    index index.php index.html index.htm;
+
+    access_log /var/log/nginx/ekultura_access.log;
+    error_log /var/log/nginx/ekultura_error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+}
+server {
+    listen 80;
+    server_name ekultura.eu www.ekultura.eu;
+
+    return 301 https://ekultura.eu$request_uri;
 }
 ```
 
