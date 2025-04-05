@@ -201,6 +201,45 @@ server {
 
 ---
 
+## 📏 Certbot (Let's Encrypt) – práce s certifikáty
+
+### ✅ Vytvoření certifikátu
+```bash
+sudo certbot --nginx -d domena.cz -d www.domena.cz
+```
+
+### ⚖️ Otestování
+```bash
+sudo certbot renew --dry-run
+```
+
+### ⏳ Ruční prodloužení
+```bash
+sudo certbot renew
+```
+
+### ❌ Smazání certifikátu
+```bash
+sudo certbot delete --cert-name domena.cz
+```
+
+### 🔍 Seznam certifikátů
+```bash
+sudo certbot certificates
+```
+
+### ❌ Kompletní odstranění webu
+```bash
+sudo rm /etc/nginx/sites-enabled/setkaniscestou.ekultura.eu
+sudo rm /etc/nginx/sites-available/setkaniscestou.ekultura.eu
+sudo systemctl reload nginx
+sudo certbot delete --cert-name setkaniscestou.ekultura.eu
+sudo rm -rf /var/www/setkaniscestou.cz
+```
+
+---
+
+
 ## 🧾 Logy
 
 Logy jsou umístěny ve složce `/var/log/nginx/`:
