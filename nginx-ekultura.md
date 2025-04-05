@@ -57,7 +57,7 @@ Certbot obvykle vytvoří automaticky, ale můžeme upravit ručně:
 ```bash
 sudo certbot --nginx -d ekultura.eu -d www.ekultura.eu
 ```
-A poté
+A poté přesměrování  na jednu variantu
 ```nginx
 server {
     listen 80;
