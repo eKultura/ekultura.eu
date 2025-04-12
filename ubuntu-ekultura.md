@@ -43,6 +43,8 @@ usermod -aG sudo <jméno>       # přidání uživatele do sudo
 passwd <jméno>                 # změna hesla
 whoami                         # aktuální uživatel
 id                             # info o UID/GID
+groupadd <název_skupiny>       # nová skupina
+usermod -a <jméno> -G <group>  # přidání uživatele do skupiny
 ```
 
 ## 📂 Práce se soubory a oprávněními
