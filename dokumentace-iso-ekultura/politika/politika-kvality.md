@@ -8,7 +8,7 @@
 
 ## 1. Úvod
 
-eKultura, z. s. se zavazuje k podpoře, ochraně a rozvoji kulturního dědictví prostřednictvím projektů, vzdělávání a digitálních nástrojů.
+**[eKultura](https://ekultura.eu)**, z. s. se zavazuje k podpoře, ochraně a rozvoji kulturního dědictví prostřednictvím projektů, vzdělávání a digitálních nástrojů.
 
 ## 2. Zásady kvality
 
