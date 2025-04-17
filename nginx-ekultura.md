@@ -316,6 +316,14 @@ access_log /var/log/nginx/custom_access.log;
 error_log /var/log/nginx/custom_error.log;
 ```
 
+
+## 🧾 Rozšíření, 404, 500 apod.
+
+
+```nginx
+    error_page 404 /404.html;
+```
+
 ---
 
 *Vytvořeno pro interní potřeby projektů [eKultura](https://ekultura.eu) z. s.*  
