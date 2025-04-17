@@ -1,5 +1,3 @@
-# politika/information-security-policy.md
-
 # Information Security Policy
 
 **Organization:** eKultura, z. s.  
