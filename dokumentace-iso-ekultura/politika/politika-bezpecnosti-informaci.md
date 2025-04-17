@@ -1,7 +1,7 @@
 # Politika bezpečnosti informací
 
 **Organizace:** eKultura, z. s.  
-**Platnost od:** 2024-04-17  
+**Platnost od:** 2025-04-17  
 **Verze:** 1.0 | [EN version](politika/information-security-policy.md)
 **ISO:** 27001 
 ---
@@ -29,4 +29,4 @@ Tato politika je přezkoumávána nejméně jednou ročně nebo při zásadních
 ---
 
 *Schválil:* Předseda eKultura, z. s.  
-*Datum schválení:* 2024-04-17
+*Datum schválení:* 2025-04-17
