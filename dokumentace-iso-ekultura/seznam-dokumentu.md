@@ -4,7 +4,7 @@ Tento seznam obsahuje základní dokumenty doporučené nebo požadované pro im
 
 | Název dokumentu | ISO 9001 | ISO 27001 | Typ dokumentu | Povinný |
 |----------------|----------|------------|----------------|----------|
-| Politika kvality | ✅ |  | Politika | ✅ |
+| [Politika kvality](politika/politika-kvality.md) | ✅ |  | Politika | ✅ |
 | Politika bezpečnosti informací |  | ✅ | Politika | ✅ |
 | Organizační struktura eKultura | ✅ | ✅ | Popis rolí | ✅ |
 | Seznam projektů a služeb | ✅ |  | Přehled činností | ➖ |
