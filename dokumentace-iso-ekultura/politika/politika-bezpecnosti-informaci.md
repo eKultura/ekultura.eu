@@ -1,10 +1,8 @@
-# politika/politika-bezpecnosti-informaci.md
-
 # Politika bezpečnosti informací
 
 **Organizace:** eKultura, z. s.  
 **Platnost od:** 2024-04-17  
-**Verze:** 1.0  
+**Verze:** 1.0 | [EN version](politika/information-security-policy.md)
 
 ---
 
