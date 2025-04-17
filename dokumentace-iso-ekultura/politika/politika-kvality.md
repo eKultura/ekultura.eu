@@ -8,12 +8,16 @@
 
 ## 1. Úvod
 
-**[eKultura](https://ekultura.eu)**, z. s. se zavazuje k podpoře, ochraně a rozvoji kulturního dědictví prostřednictvím projektů, vzdělávání a digitálních nástrojů.
+**[eKultura](https://ekultura.eu)**, z. s. je neziskový spolek zaměřený na uchovávání, rozvoj a propagaci českého kulturního dědictví prostřednictvím projektů, vzdělávání a digitálních technologií. Klademe důraz na kvalitu našich služeb a otevřený přístup k uživatelům a partnerům.
+
 
 ## 2. Zásady kvality
 
-- Důsledná orientace na potřeby uživatelů (školy, obce, kulturní instituce)
-- Transparentnost a otevřenost našich procesů
+- Zaměření na potřeby našich uživatelů, dobrovolníků a spolupracujících organizací.
+- Transparentnost a otevřenost procesů včetně zveřejňování části dokumentace.
+- Trvalé zlepšování – prostřednictvím zpětné vazby a retrospektiv.
+- Využití open-source technologií a inovací ke zvýšení kvality a dostupnosti.
+- Budování pozitivního a respektujícího prostředí.
 - Využívání moderních technologií pro zajištění kvality
 - Zapojení komunity a dobrovolníků do zlepšování služeb
 
