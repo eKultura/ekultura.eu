@@ -34,7 +34,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOgXFOK9IN9I7EC1xbUNZ8AzKAZwCdoYNfoaPHO8tV
 
 ### laura
 ```
-
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOO2hXhYt3BYqDbdubwgEzGtjb8ZlzAjON+sUryXT/TE laura.menova@gmail.com
 ```
 
 ### jakub
