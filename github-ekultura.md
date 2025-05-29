@@ -161,6 +161,10 @@ git pull origin master
 git reset --hard // na produkci nejsou trvalé změny žádoucí
 git pull origin master
 
+find . -name "*.pyc" -delete
+find . -name "__pycache__" -type d -exec rm -r {} +
+
+systemctl restart uwsgi
 
 # 3. Problémy
 git rm --cached .env
