@@ -148,6 +148,28 @@ git push origin feature-branch --tags
 
 ---
 
+## 🚀 Přímá cesta z předprodukce/testu na produkci
+
+```bash
+# 1. přidat zmněny, commit a odeslat na TESTu
+git add .
+git commit -m "Moje místní úpravy před pull"
+git push origin master
+
+# 2. PRODUKCE
+git pull origin master
+git reset --hard // na produkci nejsou trvalé změny žádoucí
+git pull origin master
+
+
+# 3. Problémy
+git rm --cached .env
+
+
+```
+
+---
+
 *Vytvořeno pro interní potřeby projektů [eKultura](https://ekultura.eu) z. s.*  
 `#eKultura #Git #GitHub #workflow`
 
