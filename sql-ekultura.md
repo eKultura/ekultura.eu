@@ -51,6 +51,12 @@ SHOW TABLES;
 
 -- Seznam uživatelů
 SELECT user, host FROM mysql.user;
+
+-- Běžící procesy
+SHOW PROCESSLIST;
+
+-- Ukončení procesu
+KILL "id"
 ```
 
 ## 🩹 Odstranění databáze nebo uživatele
