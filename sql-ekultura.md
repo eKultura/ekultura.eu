@@ -36,6 +36,9 @@ FLUSH PRIVILEGES;
 -- Změna hesla uživatele
 ALTER USER 'ekultura_user'@'localhost' IDENTIFIED BY 'nove_bezpecne_heslo';
 ALTER USER 'ekultura_user'@'%' IDENTIFIED BY 'nove_bezpecne_heslo';
+
+-- Propsání změn
+FLUSH PRIVILEGES;
 ```
 
 ## 📋 Zobrazení informací
