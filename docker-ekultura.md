@@ -90,6 +90,11 @@ docker logs magic_django
 docker logs magic_django --tail 100 -f
 ```
 
+### Smazání dlouhých logů
+```sh
+docker system prune --volumes
+```
+
 ---
 
 ## 🔧 Spouštění příkazů uvnitř kontejnerů
