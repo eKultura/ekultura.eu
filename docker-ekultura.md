@@ -92,7 +92,8 @@ docker logs magic_django --tail 100 -f
 
 ### Smazání dlouhých logů
 ```sh
-docker system prune --volumes
+sudo truncate -s 0 $(docker inspect --format='{{.LogPath}}' fdk
+_django)
 ```
 
 ---
