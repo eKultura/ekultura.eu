@@ -85,6 +85,16 @@ docker logs <container_name>
 docker logs magic_django
 ```
 
+**Přesná cesta k logu:**
+```sh
+docker inspect fdk_django --format='{{.LogPath}}'
+```
+**Smazání logu:**
+```sh
+sudo truncate -s 0 /cesta/k/souboru.log
+```
+
+
 ### Posledních 100 řádků s aktualizací v reálném čase
 ```sh
 docker logs magic_django --tail 100 -f
