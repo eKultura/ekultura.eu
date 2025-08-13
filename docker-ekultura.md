@@ -61,6 +61,10 @@ docker start <container_name>
 ```sh
 docker ps
 ```
+### Jen názvy kontejnerů (pro rychlé nalezení názvu)
+```sh
+docker ps --format "{{.Names}}  {{.Image}}"
+```
 
 ### Všechny kontejnery (včetně zastavených)
 ```sh
